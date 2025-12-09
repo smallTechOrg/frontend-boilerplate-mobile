@@ -13,9 +13,8 @@ export default function RootLayout() {
         drawerActiveTintColor: 'blue', // Color for the active link in the drawer menu
       }}
     >
-      {/* Screen name must match the file name (index.tsx)
-        The title here is what appears in the HEADER and the DRAWER MENU 
-      */}
+      
+      {/* Root index page - shown by default */}
       <Drawer.Screen
         name="index"
         options={{
@@ -23,9 +22,16 @@ export default function RootLayout() {
         }}
       />
 
-      {/* Screen name must match the file name (details.tsx)
-        This will automatically add "Details" to the drawer menu.
-      */}
+      {/* Tabs layout with bottom tabs navigation */}
+      <Drawer.Screen
+        name="(tabs)"
+        options={{
+          title: "Main",
+          headerShown: true,
+        }}
+      />
+
+      {/* Additional drawer items can be added here */}
       <Drawer.Screen
         name="details"
         options={{
@@ -34,5 +40,6 @@ export default function RootLayout() {
       />
 
     </Drawer>
+    
   );
 }
