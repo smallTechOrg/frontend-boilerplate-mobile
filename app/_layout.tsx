@@ -4,7 +4,9 @@ import { Drawer } from "expo-router/drawer";
 export default function RootLayout() {
   return (
     <Drawer
+     initialRouteName="(tabs)"
       screenOptions={{
+        
         // Global options applied to ALL screens in the drawer
         headerStyle: {
           backgroundColor: '#ADD8E6', // Light Blue Header Background
@@ -13,16 +15,16 @@ export default function RootLayout() {
         drawerActiveTintColor: 'blue', // Color for the active link in the drawer menu
       }}
     >
-      
-      {/* Root index page - shown by default */}
+
+      {/* Direct link to root index with bottom tabs */}
       <Drawer.Screen
         name="index"
         options={{
-          title: "Home Dashboard",
+          title: "Home",
         }}
       />
 
-      {/* Tabs layout with bottom tabs navigation */}
+      {/* Root index page - shown by default */}
       <Drawer.Screen
         name="(tabs)"
         options={{
@@ -30,7 +32,7 @@ export default function RootLayout() {
           headerShown: true,
         }}
       />
-
+      
       {/* Additional drawer items can be added here */}
       <Drawer.Screen
         name="details"
@@ -40,6 +42,6 @@ export default function RootLayout() {
       />
 
     </Drawer>
-    
+
   );
 }
