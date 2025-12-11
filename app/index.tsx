@@ -8,23 +8,18 @@ const Tab = createBottomTabNavigator();
 
 export default function Index(): JSX.Element {
   const screenOptions = {
-    tabBarActiveTintColor: "#007AFF",
-    tabBarInactiveTintColor: "#999",
-    tabBarStyle: {
-      backgroundColor: "#f5f5f5",
-      borderTopColor: "#e5e5e5",
-      borderTopWidth: 1,
-      height: 60,
-      paddingBottom: 8,
-    },
     headerShown: false,
   } as const;
 
   const renderIcon = (
     name: "home" | "explore"
-  ): ((props: { color: string; focused: boolean }) => JSX.Element) =>
-    ({ color }) =>
-      <MaterialIcons name={name} size={24} color={color} />;
+  ): ((props: {focused: boolean }) => JSX.Element) => {
+    const IconComponent = () =>
+      <MaterialIcons name={name} size={24} />;
+    IconComponent.displayName = `TabIcon(${name})`;
+    return IconComponent;
+  }
+
 
   const tabScreen = (
     name: string,
