@@ -21,13 +21,13 @@ export default function RootLayout() {
           title: "Home",
         }}
       />
-      <Drawer.Screen
+       <Drawer.Screen
         name="(tabs)"
         options={{
-          title: "Main",
-          headerShown: true,
+         drawerItemStyle: { display: "none" }  
         }}
       />
+
       <Drawer.Screen
         name="details"
         options={({ navigation }) => ({
