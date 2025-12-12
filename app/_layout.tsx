@@ -7,11 +7,6 @@ export default function RootLayout() {
     <Drawer
       initialRouteName="(tabs)"
       screenOptions={{
-        // Global options applied to ALL screens in the drawer
-        headerStyle: {
-          backgroundColor: '#ADD8E6', // Light Blue Header Background
-        },
-        headerTintColor: 'black', // Color of the title and back/menu button
         drawerActiveTintColor: 'blue', // Color for the active link in the drawer menu
       }}
     >
@@ -29,9 +24,9 @@ export default function RootLayout() {
       />
 
       <Drawer.Screen
-        name="details"
+        name="about"
         options={({ navigation }) => ({
-          title: "Details Page",
+          title: "About Page",
           headerLeft: (props) => (
             <HeaderBackButton {...props} onPress={() => navigation.goBack()} />
           ),

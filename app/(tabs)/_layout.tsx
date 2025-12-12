@@ -7,15 +7,6 @@ export default function TabsLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: '#007AFF',
-        tabBarInactiveTintColor: '#999',
-        tabBarStyle: {
-          backgroundColor: '#f5f5f5',
-          borderTopColor: '#e5e5e5',
-          borderTopWidth: 1,
-          height: 60,
-          paddingBottom: 8,
-        },
         headerShown: false,
       }}
     >
@@ -34,10 +25,10 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="components"
         options={{
-          title: 'Explore',
-          tabBarLabel: 'Explore',
+          title: 'Components',
+          tabBarLabel: 'Components',
           tabBarIcon: ({ color, focused }) => (
             <MaterialIcons 
               name={focused ? 'explore' : 'explore'} 
