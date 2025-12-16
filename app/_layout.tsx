@@ -1,19 +1,35 @@
 // app/_layout.tsx
 import { HeaderBackButton } from "@react-navigation/elements";
+import { useFonts } from "expo-font";
 import { Drawer } from "expo-router/drawer";
 
+
 export default function RootLayout() {
+  const [fontsLoaded] = useFonts({
+    "Nunito-Regular": require("../assets/fonts/Nunito-Regular.ttf"),
+  });
+
+  if (!fontsLoaded) {
+    return null;
+  }
+
   return (
     <Drawer
-      initialRouteName="(tabs)"
+      initialRouteName="index"
       screenOptions={{
-        drawerActiveTintColor: 'blue', // Color for the active link in the drawer menu
+        drawerActiveTintColor: 'blue',
+        drawerLabelStyle: {
+          fontFamily: "Nunito-Regular",
+        }, 
       }}
     >
       <Drawer.Screen
         name="index"
         options={{
           title: "Home",
+          headerTitleStyle: {
+            fontFamily: "Nunito-Regular",
+          },
         }}
       />
        <Drawer.Screen
@@ -27,6 +43,9 @@ export default function RootLayout() {
         name="about"
         options={({ navigation }) => ({
           title: "About Page",
+          headerTitleStyle: {
+            fontFamily: "Nunito-Regular",
+          },
           headerLeft: (props) => (
             <HeaderBackButton {...props} onPress={() => navigation.goBack()} />
           ),
