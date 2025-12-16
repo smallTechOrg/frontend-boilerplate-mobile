@@ -8,13 +8,19 @@ export default function TabsLayout() {
     <Tabs
       screenOptions={{
         headerShown: false,
+        tabBarLabelStyle: {
+          fontFamily: "Nunito-Regular",
+        },
       }}
     >
       <Tabs.Screen
         name="index"
         options={{
           title: 'Home',
-          tabBarLabel: 'Home',
+          
+          tabBarLabelStyle: {
+            fontFamily: "Nunito-Regular",
+          },
           tabBarIcon: ({ color, focused }) => (
             <MaterialIcons 
               name={focused ? 'home' : 'home'} 
@@ -29,6 +35,9 @@ export default function TabsLayout() {
         options={{
           title: 'Components',
           tabBarLabel: 'Components',
+          tabBarLabelStyle: {
+            fontFamily: "Nunito-Regular",
+          },
           tabBarIcon: ({ color, focused }) => (
             <MaterialIcons 
               name={focused ? 'explore' : 'explore'} 

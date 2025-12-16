@@ -1,10 +1,11 @@
-import { Text, View } from "react-native";
+import CustomText from "@/components/CustomText";
+import { View } from "react-native";
 
 export default function Explore() {
   return (
     <View
     >
-      <Text>Components</Text>
+      <CustomText>Components</CustomText>
     </View>
   );
 }

@@ -1,9 +1,10 @@
-import { Text, View } from "react-native";
+import CustomText from "@/components/CustomText";
+import { View } from "react-native";
 
 export default function About() {
   return (
     <View   >
-      <Text> about boilerplate</Text>
+      <CustomText> About boilerplate</CustomText>
     </View>
   );
 }
