@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #6200EE;
+    --color-InkBlack: #001219;
+    --color-DarkTeal: #005F73;
+    --color-DarkCyan: #0A9396;
+    --color-PearlAqua: #94D2BD;
+    --color-VanillaCustard: #E9D8A6;
+    --color-GoldenOrange: #EE9B00;
+    --color-BurntCaramel: #CA6702;
+    --color-RustySpice: #BB3E03;
+    --color-OxidisedIron: #AE2012;
+    --color-BrownRed: #9B2226;
+
+  }
+}
